@@ -64,7 +64,6 @@ public class E2EConfig {
             RATINGS_SERVICE = createRatingsServiceContainer(environment);
 
             Startables.deepStart(PASSENGERS_SERVICE, DRIVER_SERVICE, RIDES_SERVICE, RATINGS_SERVICE).join();
-//            Startables.deepStart(PASSENGERS_SERVICE).join();
             setPropertiesForConnections(environment);
 
             Thread.sleep(150000);
